@@ -1,0 +1,15 @@
+<launch>
+    <rosparam command="load" file="$(find hw05)/config/data.yaml"/>
+
+    <node pkg = "turtlesim" type = "turtlesim_node" name = "turtlesim">
+    </node>
+
+    <node pkg = "hw05" type = "set_global_color" name = "set_global_color_node" output="screen">
+    </node>
+
+    <node pkg = "hw05" type = "rand_run1" name = "rand_run_node" respawn = "true" output="screen">
+        <rosparam command="load" file="$(find hw05)/config/data2.yaml"/>
+    </node>
+
+</launch>
+

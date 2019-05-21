@@ -1,0 +1,22 @@
+<launch>
+
+    <arg name="turtle_id" default="normal"/>
+    <arg name="turtle_id1" default="reverse"/>
+    
+    <node pkg = "turtlesim"  type = "turtle_teleop_key"  name = "teleop_key"  respawn = "true" >
+    </node>
+
+    <node pkg = "hw03"  type = "rev_turtle"  name = "rev_cmd_node"  respawn = "true"     >
+    </node>
+
+    <!-- respawn and required cannot both be set to true.  -->
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "normal_turtle"  required = "true"     >
+    </node>
+
+    <node  pkg = "turtlesim"  type = "turtlesim_node"  name = "reverse_turtle"  required = "true"     >
+        <remap from="/turtle1/cmd_vel"  	  to="/turtle1/rev_cmd"	/>
+    </node>
+
+</launch>
+
+

@@ -1,0 +1,20 @@
+background_r: 10
+background_g: 80
+background_b: 65
+# freq: 2
+rosdistro: 'kinetic
+
+  '
+roslaunch:
+  uris: {host_p_x550vx__34385: 'http://p-X550VX:34385/', host_p_x550vx__34811: 'http://p-X550VX:34811/',
+    host_p_x550vx__36407: 'http://p-X550VX:36407/', host_p_x550vx__37045: 'http://p-X550VX:37045/',
+    host_p_x550vx__37575: 'http://p-X550VX:37575/', host_p_x550vx__38509: 'http://p-X550VX:38509/',
+    host_p_x550vx__43609: 'http://p-X550VX:43609/', host_p_x550vx__45061: 'http://p-X550VX:45061/',
+    host_titan__33729: 'http://titan:33729/'}
+rosversion: '1.12.14
+
+  '
+run_id: e4974020-2536-11e9-9734-38d5471a4b7e
+self_param1: 120
+set_local_color_node: {background_b: 0, background_g: 2, background_r: 0, freq: 2}
+set_turtle_spd_node: {background_b: 0, background_g: 2, background_r: 0, freq: 2}

@@ -1,0 +1,8 @@
+<launch>   
+    <arg name="val1" value="8"/>
+    <node pkg = "hw04"  type = "pow_service"  name = "pow1" output="screen"/>
+    <node pkg = "hw04"  type = "client_service"  name = "client1" args="$(arg val1)"/>
+
+    <node pkg = "turtlesim"  type = "turtlesim_node"  name = "turtlesim_node"  required = "true" />
+    <node pkg = "hw04"  type = "rand_run_msg"  name = "rand_run_msg"  respawn = "true" />
+</launch>
